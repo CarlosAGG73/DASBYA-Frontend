@@ -15,6 +15,7 @@ export class ProcesarPedidoService {
   }
 
   productosCategorias(idCategoria:number):Observable<any>{
+    console.log("productosCategorias");
     let url="http://localhost:8081/productos";
     let params=new HttpParams();
     params=params.append("idCategoria", idCategoria)

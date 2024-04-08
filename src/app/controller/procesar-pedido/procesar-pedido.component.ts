@@ -17,10 +17,13 @@ export class ProcesarPedidoComponent implements OnInit{
   }
   ngOnInit(): void {
     this.procesarPedidoService.categorias().subscribe(c=>this.categorias=c);
+    console.log("onInit1");
   }
 
   productosCategoria(){
+    console.log("productosCategoria1");
     this.procesarPedidoService.productosCategorias(this.idCategoriaSelec).subscribe(p=>this.productos=p);
+    console.log("productosCategoria2");
   }
 
 
