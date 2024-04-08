@@ -22,6 +22,7 @@ import { ProcesarPedidoComponent } from './controller/procesar-pedido/procesar-p
   ],
   providers: [],
 //  bootstrap: [LoginComponent]//debe indicar el componente inicial de la aplicacion
-bootstrap: [RegistrarComponent]//vamos a probar solo el registrar, asi que cambiamos el bootstrap y el indexhtml ponemso el app-registrar
+//bootstrap: [RegistrarComponent]//vamos a probar solo el registrar, asi que cambiamos el bootstrap y el indexhtml ponemso el app-registrar
+bootstrap: [ProcesarPedidoComponent]//vamos a probar solo el combo/tabla de categorias y carga de productos. cambiamos esto y el index.html "app-procesar-pedido"
 })
 export class AppModule { }
