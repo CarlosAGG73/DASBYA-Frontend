@@ -9,12 +9,31 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    body {
+      background-image: url(assets/carrito.jpg);  background-position:center;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-attachment: fixed;
+
+    }
+    #apartado1{
+      width:1100px;
+      height:150px;
+      border:3px solid brown;
+      border-radius:22px;
+    }
+  </style>
+
 </head>
 <body>
   <!--<app-root></app-root>Este selector apuntaba a la app.component.html que hemos borrado ahora la llama al selector app-login
                             ademas de indicarlos en el bootstrap del app.module.ts-->
   <!--app-login></app-login vamos a probar el app-registrar asique cambiamos el selector-->
   <!--app-registrar></app-registrar-->
-  <app-procesar-pedido></app-procesar-pedido>
+  <!--<app-procesar-pedido></app-procesar-pedido>-->
+  <!--<app-consultar-pedidos></app-consultar-pedidos>-->
+  <app-menu></app-menu>
 </body>
 </html>

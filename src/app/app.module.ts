@@ -7,12 +7,18 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './controller/login/login.component';
 import { RegistrarComponent } from './controller/registrar/registrar.component';
 import { ProcesarPedidoComponent } from './controller/procesar-pedido/procesar-pedido.component';
+import { ConsultarPedidosComponent } from './controller/consultar-pedidos/consultar-pedidos.component';
+import { MenuComponent } from './controller/menu/menu.component';
+import { PortadaComponent } from './controller/portada/portada.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegistrarComponent,
-    ProcesarPedidoComponent
+    ProcesarPedidoComponent,
+    ConsultarPedidosComponent,
+    MenuComponent,
+    PortadaComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +27,10 @@ import { ProcesarPedidoComponent } from './controller/procesar-pedido/procesar-p
     FormsModule
   ],
   providers: [],
-//  bootstrap: [LoginComponent]//debe indicar el componente inicial de la aplicacion
+//bootstrap: [LoginComponent]//debe indicar el componente inicial de la aplicacion
 //bootstrap: [RegistrarComponent]//vamos a probar solo el registrar, asi que cambiamos el bootstrap y el indexhtml ponemso el app-registrar
-bootstrap: [ProcesarPedidoComponent]//vamos a probar solo el combo/tabla de categorias y carga de productos. cambiamos esto y el index.html "app-procesar-pedido"
+//bootstrap: [ProcesarPedidoComponent]//vamos a probar solo el combo/tabla de categorias y carga de productos. cambiamos esto y el index.html "app-procesar-pedido"
+//bootstrap: [ConsultarPedidosComponent]
+bootstrap: [MenuComponent]
 })
 export class AppModule { }

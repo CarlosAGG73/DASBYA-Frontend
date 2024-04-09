@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from '../../model/Categoria';
 import { Producto } from '../../model/Producto';
 import { CestaItem } from '../../model/CestaItem';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-procesar-pedido',
@@ -14,7 +15,8 @@ export class ProcesarPedidoComponent implements OnInit{
   productos:Producto[];
   idCategoriaSelec:number;
   cesta:CestaItem[];
-  constructor(private procesarPedidoService:ProcesarPedidoService){
+  constructor(private procesarPedidoService:ProcesarPedidoService,
+    private menuComponent:MenuComponent){
 
   }
   ngOnInit(): void {
@@ -70,7 +72,11 @@ export class ProcesarPedidoComponent implements OnInit{
 
 
   procesarPedido(){
-    this.procesarPedidoService.enviarPedido(this.cesta, "user1"); //ponemos este usuario temporalmente hasta que conectemos todo, ya que no tenemos ahora el servicio de usuarios. luego sera (usuario: sting)
+    //ponemos este usuario temporalmente hasta que conectemos todo, ya que no tenemos ahora el servicio de usuarios. luego sera (usuario: sting)
+    this.procesarPedidoService.enviarPedido(this.cesta, this.menuComponent.cliente.usuario).subscribe({
+      next:r=>alert("Pedido procesado."),
+      error:e=>alert("El Pedido no se ha procesado.")
+      });
   }
 
 }
