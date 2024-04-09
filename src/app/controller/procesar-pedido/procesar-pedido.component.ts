@@ -70,7 +70,8 @@ export class ProcesarPedidoComponent implements OnInit{
 
 
   procesarPedido(){
-    this.procesarPedidoService.enviarPedido(this.cesta, "user1"); //ponemos este usuario temporalmente hasta que conectemos todo, ya que no tenemos ahora el servicio de usuarios. luego sera (usuario: sting)
+    //ponemos este usuario temporalmente hasta que conectemos todo, ya que no tenemos ahora el servicio de usuarios. luego sera (usuario: sting)
+    this.procesarPedidoService.enviarPedido(this.cesta, "user1").subscribe(r=>alert("Pedido procesado."));
   }
 
 }
